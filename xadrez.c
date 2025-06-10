@@ -3,6 +3,7 @@
 // Desafio de Xadrez - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+#define movimento_rainha 8 
 
 int main() {
     // Nível Novato - Movimentação das Peças
@@ -33,8 +34,13 @@ int main() {
         printf("Digite 8 para rainha andar 8 casas para esquerda: \n");
         scanf("%d", &rainha);
 
-    }while (rainha < 8);
-    printf("A rainha andou 8 casas para esquerda!\n");// movimento da rainha para esquerda, om ajuda do usuário
+        if(rainha > movimento_rainha){
+            printf("Erro. A rainha só pode se movimentar %d casas, tente novamente!\n", movimento_rainha);
+        }
+        
+    }while (rainha > movimento_rainha || rainha < 1);
+
+    printf("A rainha andou %d casas para esquerda!\n", rainha);// movimento da rainha para esquerda, om ajuda do usuário
 
 
    
