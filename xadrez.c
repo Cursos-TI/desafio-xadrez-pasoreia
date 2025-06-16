@@ -11,6 +11,7 @@ int main() {
     int rainha = 0;
     int bispo = 0;
     int torre;
+    int cavalo = 1;
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
     printf("Bispo andar 5 casas na diagonal a direita! \n");
@@ -38,11 +39,19 @@ int main() {
             printf("Erro. A rainha só pode se movimentar %d casas, tente novamente!\n", movimento_rainha);
         }
         
-    }while (rainha > movimento_rainha || rainha < 1);
+    }while (rainha < movimento_rainha );
 
     printf("A rainha andou %d casas para esquerda!\n", rainha);// movimento da rainha para esquerda, om ajuda do usuário
 
 
+    printf("Cavalo andar 2 casas para baixo e 1 para esquerda!\n ");// moviemnto do cavalo 
+    while(cavalo--){
+        for(int i = 0; i < 2; i++){
+            printf("Baixo\n");
+        }
+        printf("Esquerda\n");
+    }
+    
    
     
 
